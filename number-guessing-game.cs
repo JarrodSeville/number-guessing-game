@@ -33,7 +33,60 @@ namespace Number_guessing_game
                     }
                     else
                         Console.WriteLine("That input is invalid. Please choose a valid input.");
+                }
 
+                // This is the easy mode
+                else if (result_input_difficulty == 2)
+                {
+                    Console.Write("You have chosen the easy mode, select a number from 1-5: ");
+                    string input_easy = Console.ReadLine();
+                    if (int.TryParse(input_easy, out int result_input_easy) && result_input_easy >= 1 && result_input_easy <= 5)
+                    {
+                        Random rnd = new Random();
+                        int random_num = rnd.Next(1, 5);
+                        if (result_input_easy == random_num)
+                            Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
+                        else
+                            Console.WriteLine($"Sorry, that's wrong. The number I was thinking of was {random_num}");
+                    }
+                    else
+                        Console.WriteLine("That input is invalid. Please choose a valid input.");
+                }
+
+                // This is the normal mode
+                else if (result_input_difficulty == 3)
+                {
+                    Console.Write("You have chosen the normal mode, select a number from 1-10: ");
+                    string input_normal = Console.ReadLine();
+                    if (int.TryParse(input_normal, out int result_input_normal) && result_input_normal >= 1 && result_input_normal <= 10)
+                    {
+                        Random rnd = new Random();
+                        int random_num = rnd.Next(1, 10);
+                        if (result_input_normal == random_num)
+                            Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
+                        else
+                            Console.WriteLine($"Sorry, that's wrong. The number I was thinking of was {random_num}");
+                    }
+                    else
+                        Console.WriteLine("That input is invalid. Please choose a valid input.");
+                }
+
+                // This is the hard mode
+                else if (result_input_difficulty == 4)
+                {
+                    Console.Write("You have chosen the hard mode, select a number from 1-20: ");
+                    string input_hard = Console.ReadLine();
+                    if (int.TryParse(input_hard, out int result_input_hard) && result_input_hard >= 1 && result_input_hard <= 20)
+                    {
+                        Random rnd = new Random();
+                        int random_num = rnd.Next(1, 20);
+                        if (result_input_hard == random_num)
+                            Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
+                        else
+                            Console.WriteLine($"Sorry, that's wrong. The number I was thinking of was {random_num}");
+                    }
+                    else
+                        Console.WriteLine("That input is invalid. Please choose a valid input.");
                 }
             }
 
