@@ -17,7 +17,24 @@ namespace Number_guessing_game
             // The if is when the input is valid
             if (int.TryParse(input_difficulty, out int result_input_difficulty) && result_input_difficulty >= 1 && result_input_difficulty <= 4)
             {
-               
+                // This is the super easy mode
+                if (result_input_difficulty == 1)
+                {
+                    Console.Write("You have chosen super easy mode, select a number from 1-3: ");
+                    string input_supereasy = Console.ReadLine();
+                    if (int.TryParse(input_supereasy, out int result_input_supereasy) && result_input_supereasy >= 1 && result_input_supereasy <= 3)
+                    {
+                        Random rnd = new Random();
+                        int random_num = rnd.Next(1, 3);
+                        if (result_input_supereasy == random_num)
+                            Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
+                        else
+                            Console.WriteLine($"Sorry, that's wrong. The number I was thinking of was {random_num}");
+                    }
+                    else
+                        Console.WriteLine("That input is invalid. Please choose a valid input.");
+
+                }
             }
 
             // The else is when the input is invalid
