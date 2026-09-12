@@ -30,7 +30,7 @@ namespace Number_guessing_game
                         if (int.TryParse(input_supereasy, out int result_input_supereasy) && result_input_supereasy >= 1 && result_input_supereasy <= 3)
                         {
                             Random rnd = new Random();
-                            int random_num = rnd.Next(1, 3);
+                            int random_num = rnd.Next(1, 4);
                             if (result_input_supereasy == random_num)
                                 Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
                             else
@@ -48,7 +48,7 @@ namespace Number_guessing_game
                         if (int.TryParse(input_easy, out int result_input_easy) && result_input_easy >= 1 && result_input_easy <= 5)
                         {
                             Random rnd = new Random();
-                            int random_num = rnd.Next(1, 5);
+                            int random_num = rnd.Next(1, 6);
                             if (result_input_easy == random_num)
                                 Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
                             else
@@ -66,7 +66,7 @@ namespace Number_guessing_game
                         if (int.TryParse(input_normal, out int result_input_normal) && result_input_normal >= 1 && result_input_normal <= 10)
                         {
                             Random rnd = new Random();
-                            int random_num = rnd.Next(1, 10);
+                            int random_num = rnd.Next(1, 11);
                             if (result_input_normal == random_num)
                                 Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
                             else
@@ -84,7 +84,7 @@ namespace Number_guessing_game
                         if (int.TryParse(input_hard, out int result_input_hard) && result_input_hard >= 1 && result_input_hard <= 20)
                         {
                             Random rnd = new Random();
-                            int random_num = rnd.Next(1, 20);
+                            int random_num = rnd.Next(1, 21);
                             if (result_input_hard == random_num)
                                 Console.WriteLine($"That's correct! The number I was thinking of was {random_num}");
                             else
